@@ -1,0 +1,13 @@
+{
+    "name": "root/rest-of-web",
+    "description": "share ressources",
+    "authors": [
+        {
+            "name": "tmahamadou01",
+            "email": "mahamadoutraore1@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.5"
+    }
+}
