@@ -1,6 +1,23 @@
 {% extends "layout.twig" %}
 
 {% block content %}
+    <div class="ui modal">
+        <i class="close icon"></i>
+        <div class="header">
+            Ajouter une ressource
+        </div>
+        <div class="image content">
+            formulaire
+        </div>
+        <div class="actions">
+            <div class="ui black deny button">
+                Retour
+            </div>
+            <div class="ui positive right button">
+                Ajouter
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
 {% block men_footer %}
@@ -9,7 +26,7 @@
             Rest of web
         </a>
         <div class="right menu">
-            <a class="item">Ajouter</a>
+            <a class="item" id="modal">Ajouter</a>
             <a class="item hasard">Voir au hasard</a>
         </div>
     </div>
