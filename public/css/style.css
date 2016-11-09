@@ -1,0 +1,19 @@
+html,body {
+    height:100%;
+}
+.ui.menu{
+    background-color: chartreuse;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.ui.menu a.item{
+    font-weight: bold;
+}
+
+.ui.menu a.item.hasard:hover{
+    background-color: #ffffff;
+    color: black;
+}

@@ -14,6 +14,7 @@ require "../app/Container.php";
 
 //routes
 $app->get('/',\App\Controllers\IndexController::class . ':index');
+$app->get('/rest-of-web',\App\Controllers\RessourcesController::class . ':index')->setName('ressources');
 
 
 
