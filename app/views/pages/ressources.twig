@@ -1,13 +1,50 @@
 {% extends "layout.twig" %}
 
 {% block content %}
+
+    <div class="ui segment" style="height: inherit;">
+        <div class="ui dimmer dimmer-hasard" id="dimmer-hasard">
+            <div class="ui massive text loader">Chargement, veuillez patientez ...</div>
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
     <div class="ui modal">
         <i class="close icon"></i>
         <div class="header">
             Ajouter une ressource
         </div>
-        <div class="image content">
-            formulaire
+        <div class="content">
+            <div class="ui large form">
+                <div class="field">
+                    <label>Nom</label>
+                    <input placeholder="Entrez le nom de la ressource" type="text">
+                </div>
+                <div class="field">
+                    <label>Lien</label>
+                    <div class="ui labeled input">
+                        <div class="ui label">
+                            http://
+                        </div>
+                        <input type="text" placeholder="Entrez le lien de la ressource">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <textarea rows="3"></textarea>
+                </div>
+                <div class="field">
+                    <select>
+                        <option value="">Catégorie</option>
+                        <option value="1">Catégorie 1</option>
+                        <option value="0">Catégorie 2</option>
+                        <option value="0">Catégorie 3</option>
+                        <option value="0">Catégorie 4</option>
+                    </select>
+                </div>
+            </div>
         </div>
         <div class="actions">
             <div class="ui black deny button">
@@ -27,7 +64,7 @@
         </a>
         <div class="right menu">
             <a class="item" id="modal">Ajouter</a>
-            <a class="item hasard">Voir au hasard</a>
+            <a class="item hasard" id="btn-hasard">Voir au hasard</a>
         </div>
     </div>
 {% endblock %}
