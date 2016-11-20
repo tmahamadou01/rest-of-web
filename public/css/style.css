@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+/*nav-barre*/
+
 html,body {
     height:100%;
 }
 .ui.menu{
-    background-color: chartreuse;
+    font-family: 'VT323', monospace;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: #fff734;
     position: fixed;
+    border: 0px;
     bottom: 0;
     width: 100%;
     margin: 0;
@@ -12,8 +20,67 @@ html,body {
 .ui.menu a.item{
     font-weight: bold;
 }
-
 .ui.menu a.item.hasard:hover{
     background-color: #ffffff;
     color: black;
+}
+
+/*modale*/
+
+.ui.modal {
+  border-radius: 0px;
+}
+.ui.modal > .header {
+  background-color: #fff734;
+  font-family: 'VT323', monospace;
+}
+.ui.modal > .content {
+  background-color: #fff734;
+}
+.ui.modal > .actions {
+  background-color: #fff734;
+  border-radius: 0px;
+  font-family: 'VT323', monospace;
+}
+
+/*buttons*/
+
+.ui.positive.buttons .button,
+.ui.positive.button {
+  background-color: #fff734;
+  color: black;
+  text-shadow: none;
+  background-image: none;
+}
+.ui.positive.buttons .button:hover,
+.ui.positive.button:hover {
+  background-color: #fff734;
+  color: #262626;
+  text-shadow: none;
+}
+/*.ui.negative.buttons .button,
+.ui.negative.button {
+  background-color: #fff734;
+  color: black;
+  text-shadow: none;
+  background-image: none;
+}
+.ui.negative.buttons .button:hover,
+.ui.negative.button:hover {
+  background-color: #fff734;
+  color: #262626;
+  text-shadow: none;
+}*/
+.ui.black.buttons .button,
+.ui.black.button {
+  background-color: #fff734;
+  color: black;
+  text-shadow: none;
+  background-image: none;
+}
+.ui.black.buttons .button:hover,
+.ui.black.button:hover {
+  background-color: #fff734;
+  color: #262626;
+  text-shadow: none;
 }
