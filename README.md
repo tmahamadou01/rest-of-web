@@ -8,4 +8,4 @@
 
 ```sh
 Commande à exécuter pour voir le projet en local :
-$ php -S localhost:80 -t public/ -ddisplay_errors=1 ( Le site sera accessible via Localhost:8080)
+$ php -S localhost:8080 -t public/ -ddisplay_errors=1 ( Le site sera accessible via Localhost:8080)
