@@ -55,7 +55,7 @@ html,body {
 .ui.positive.buttons .button:hover,
 .ui.positive.button:hover {
   background-color: #fff734;
-  color: #262626;
+  color: #808080;
   text-shadow: none;
 }
 /*.ui.negative.buttons .button,
@@ -81,6 +81,6 @@ html,body {
 .ui.black.buttons .button:hover,
 .ui.black.button:hover {
   background-color: #fff734;
-  color: #262626;
+  color: #808080;
   text-shadow: none;
 }
