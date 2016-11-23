@@ -1,0 +1,8 @@
+<?php
+
+/** Database config */
+
+define('DB_USERNAME', 'USERNAME');
+define('DB_PASSWORD', 'PASSWORD');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'DATABASE');

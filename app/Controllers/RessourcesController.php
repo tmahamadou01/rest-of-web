@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Config\DbConnect;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -20,22 +21,15 @@ class RessourcesController
         $this->container->view->render($response, 'pages/ressources.twig');
     }
 
-    public function getConnection() {
-        $dbhost="127.0.0.1";
-        $dbuser="root";
-        $dbpass="merci";
-        $dbname="Hydra";
-        $dbh = new \PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
-        $dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-        return $dbh;
-    }
+
 
     public function store(RequestInterface $request, ResponseInterface $response)
     {
+        $dbconnect = new DbConnect();
         $sql = "INSERT INTO Ressources (link, description, Categories_id, name) VALUES (:link, :description, :Categories_id, :nom)";
         //echo $sql;die();
         try {
-            $db = $this->getConnection();
+            $db = $dbconnect->getConnection();
             $stmt = $db->prepare($sql);
 
             $stmt->bindParam("link", $_POST['link']);
