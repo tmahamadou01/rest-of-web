@@ -18,7 +18,12 @@ class RessourcesController
 
     public function index(RequestInterface $request, ResponseInterface $response)
     {
-        $this->container->view->render($response, 'pages/ressources.twig');
+        $dbconnect = new DbConnect();
+        $db = $dbconnect->getConnection();
+        $sth = $db->prepare( 'SELECT * FROM Categories;' );
+        $sth->execute();
+        $result = $sth->fetchAll();
+        $this->container->view->render($response, 'pages/ressources.twig', ["categories" => $result]);
     }
 
 

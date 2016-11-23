@@ -2,46 +2,11 @@
 
 {% block content %}
     <div class="tableau">
+        {% for categorie in categories %}
         <div class="cat">
-            Base de donnée
+            {{ categorie.name|e }}
         </div>
-        <div class="cat">
-            Blog
-        </div>
-        <div class="cat">
-            Vidéos
-        </div>
-        <div class="cat">
-            Articles
-        </div>
-        <div class="cat">
-            GIFs
-        </div>
-        <div class="cat">
-            Memes
-        </div>
-        <div class="cat">
-            Memes
-        </div>
-        <div class="cat">
-            Memes
-        </div>
-        <div class="cat">
-            Memes
-        </div><div class="cat">
-            Memes
-        </div><div class="cat">
-            Memes
-        </div>
-        <div class="cat">
-            Memes
-        </div>
-        <div class="cat">
-            Memes
-        </div>
-
-
-
+    {% endfor %}
     </div>
 
     {#<div class="ui segment" style="height: inherit;">#}
