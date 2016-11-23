@@ -2,10 +2,11 @@
 
 /*nav-barre*/
 
-html,body {
-    height:100%;
+html, body {
+    height: 100%;
 }
-.ui.menu{
+
+.ui.menu {
     font-family: 'VT323', monospace;
     font-size: 15px;
     text-transform: uppercase;
@@ -17,10 +18,12 @@ html,body {
     margin: 0;
     padding: 0;
 }
-.ui.menu a.item{
+
+.ui.menu a.item {
     font-weight: bold;
 }
-.ui.menu a.item.hasard:hover{
+
+.ui.menu a.item.hasard:hover {
     background-color: #ffffff;
     color: black;
 }
@@ -28,36 +31,41 @@ html,body {
 /*modale*/
 
 .ui.modal {
-  border-radius: 0px;
+    border-radius: 0px;
 }
+
 .ui.modal > .header {
-  background-color: #fff734;
-  font-family: 'VT323', monospace;
+    background-color: #fff734;
+    font-family: 'VT323', monospace;
 }
+
 .ui.modal > .content {
-  background-color: #fff734;
+    background-color: #fff734;
 }
+
 .ui.modal > .actions {
-  background-color: #fff734;
-  border-radius: 0px;
-  font-family: 'VT323', monospace;
+    background-color: #fff734;
+    border-radius: 0px;
+    font-family: 'VT323', monospace;
 }
 
 /*buttons*/
 
 .ui.positive.buttons .button,
 .ui.positive.button {
-  background-color: #fff734;
-  color: black;
-  text-shadow: none;
-  background-image: none;
+    background-color: #fff734;
+    color: black;
+    text-shadow: none;
+    background-image: none;
 }
+
 .ui.positive.buttons .button:hover,
 .ui.positive.button:hover {
-  background-color: #fff734;
-  color: #808080;
-  text-shadow: none;
+    background-color: #fff734;
+    color: #808080;
+    text-shadow: none;
 }
+
 /*.ui.negative.buttons .button,
 .ui.negative.button {
   background-color: #fff734;
@@ -73,39 +81,43 @@ html,body {
 }*/
 .ui.black.buttons .button,
 .ui.black.button {
-  background-color: #fff734;
-  color: black;
-  text-shadow: none;
-  background-image: none;
+    background-color: #fff734;
+    color: black;
+    text-shadow: none;
+    background-image: none;
 }
+
 .ui.black.buttons .button:hover,
 .ui.black.button:hover {
-  background-color: #fff734;
-  color: #808080;
-  text-shadow: none;
+    background-color: #fff734;
+    color: #808080;
+    text-shadow: none;
 }
-.boite {
-  text-align : center;
-  font-family: 'VT323', monospace;
-  text-transform: uppercase;
-  font-size: 4.5vw;
-  color: black;
-  background-color: #fff734;
-  max-height: 100px;
-  float: left;
-  padding: 5 20 10 20;
-  margin-left: 10px;
-  margin-top: 10px;
-  flex-basis: content;
-  /*order: /*place variable*/
+
+.cat {
+    text-align: center;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    font-size: 4.5vw;
+    color: black;
+    background-color: #fff734;
+    max-height: 100px;
+    float: left;
+    padding: 5 20 10 20;
+    margin-left: 10px;
+    margin-top: 10px;
+    flex-basis: content;
+    line-height: normal;
+    /*order: /*place variable*/
 }
+
 .tableau {
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  max-width: 1000px;
-  min-width: 200px;
-  margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    max-width: 1000px;
+    min-width: 200px;
+    margin: auto;
 }
