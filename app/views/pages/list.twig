@@ -1,0 +1,20 @@
+{% block content %}
+<h1>{{ name }}</h1>
+{% for ressource in ressources %}
+    <div class="cat">
+        <a href="!#">{{ ressource.name }} #{{ ressource.id }}</a><br>
+    </div>
+{% endfor %}
+{% endblock %}
+
+{% block men_footer %}
+    <div class="ui menu">
+        <a class="item" href="{{ path_for('ressources') }}">
+            Rest of web
+        </a>
+        <div class="right menu">
+            <a class="item" id="modal">Ajouter</a>
+            <a class="item hasard" id="btn-hasard">Voir au hasard</a>
+        </div>
+    </div>
+{% endblock %}

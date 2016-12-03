@@ -4,7 +4,7 @@
     <div class="tableau">
         {% for categorie in categories %}
         <div class="cat">
-            {{ categorie.name|e }}
+            <a href="/rest-of-web/category/{{ categorie.name }}/{{ categorie.id }}">{{ categorie.name|e }}</a>
         </div>
     {% endfor %}
     </div>

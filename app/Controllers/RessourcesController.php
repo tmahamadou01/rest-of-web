@@ -52,4 +52,18 @@ class RessourcesController
         }
 
     }
+
+    public function getRessourcesListOfCategory(RequestInterface $request, ResponseInterface $response){
+        $route = $request->getAttribute('route');
+        $category_id = $route->getArgument('id');
+        $category_name = $route->getArgument('name');
+
+        $dbconnect = new DbConnect();
+        $db = $dbconnect->getConnection();
+        $sth = $db->prepare( 'SELECT * FROM Ressources WHERE Categories_id = '.$category_id);
+        $sth->execute();
+        $result = $sth->fetchAll();
+        $this->container->view->render($response, 'pages/list.twig', ["ressources" => $result, "name" => $category_name]);
+
+    }
 }

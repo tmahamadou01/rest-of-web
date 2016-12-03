@@ -94,9 +94,8 @@ html, body {
     text-shadow: none;
 }
 
+.cat a{
 /*liste categorie*/
-
-.cat {
     text-align: center;
     font-family: 'VT323', monospace;
     text-transform: uppercase;
@@ -122,6 +121,9 @@ html, body {
     max-width: 1000px;
     min-width: 200px;
     margin: auto;
+}
+.ui.form input{
+    border-radius: 40px;
 }
 
 /*liste ressources*/
