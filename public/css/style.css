@@ -125,7 +125,7 @@ html, body {
 }
 
 /*liste ressources*/
-
+/*boutons navigation*/
 .tableau1 {
     display: flex;
     flex-direction: row;
@@ -135,6 +135,7 @@ html, body {
     min-width: 200px;
     margin: auto;
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -157,7 +158,7 @@ html, body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+/*liste*/
 .tableau2 {
     display: flex;
     flex-direction: column;
