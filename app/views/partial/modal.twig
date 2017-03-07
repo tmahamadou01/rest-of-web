@@ -1,0 +1,57 @@
+<div class="ui small modal" id="modal-succes">
+    <div class="ui massive success message">
+        <i class="close icon"></i>
+        <div class="header">
+            Votre ressource à été ajouté avec succès.
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet architecto assumenda blanditiis commodi, culpa explicabo ipsum, iusto maiores nostrum numquam quaerat quas qui repellendus rerum sequi sint tempore velit!</p>
+    </div>
+</div>
+
+<div class="ui modal" id="modal-add">
+    <i class="close icon"></i>
+    <div class="header">
+        Ajouter une ressource
+    </div>
+    <div class="content">
+        <form action="{{ path_for('submit') }}" id="form-ressource" method="POST">
+            <div class="ui large form">
+                <div class="" id="message"></div>
+                <div class="field">
+                    <label>Nom</label>
+                    <input placeholder="Entrez le nom de la ressource" type="text" id="name">
+                </div>
+                <div class="field">
+                    <label>Lien</label>
+                    <div class="ui labeled input">
+                        <div class="ui label">
+                            http://
+                        </div>
+                        <input type="text" placeholder="Entrez le lien de la ressource" id="link">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <textarea rows="3" id="description"></textarea>
+                </div>
+                <div class="field">
+                    <select id="category">
+                        <option value="0">Catégorie</option>
+                        <option value="1">Catégorie 1</option>
+                        <option value="2">Catégorie 2</option>
+                        <option value="3">Catégorie 3</option>
+                        <option value="4">Catégorie 4</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <div class="ui black deny button">
+            Retour
+        </div>
+        <div class="ui positive right button" id="submit-form">
+            Ajouter
+        </div>
+    </div>
+</div>

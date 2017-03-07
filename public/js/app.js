@@ -4,6 +4,11 @@ $(document).ready(function(){
         $('#modal-add').modal('show');
     });
 
+    $("#link_list").click(function(){
+        $('#modal-detail').modal('show');
+    });
+
+
     $('.select.dropdown')
         .dropdown()
     ;
@@ -27,19 +32,7 @@ $(document).ready(function(){
         var description = $("textarea#description").val();
         var Categories_id = $("#category").val();
         var dataString = 'name=' + name + '&link=' + link + '&description=' + description + '&Categories_id=' + Categories_id;
-        // if (name == ''){
-        //     $('#error-name').addClass('ui basic red pointing prompt label transition')
-        //     $("#error-name").html('veuillez renseignez ce champ');
-        // }else if (link == ''){
-        //     $('#error-link').addClass('ui basic red pointing prompt label transition')
-        //     $("#error-link").html('veuillez renseignez ce champ');
-        // }else if (description == ''){
-        //     $('#error-description').addClass('ui basic red pointing prompt label transition')
-        //     $("#error-description").html('veuillez renseignez ce champ');
-        // }else if (Categories_id == 0){
-        //     $('#error-name').addClass('ui basic red pointing prompt label transition')
-        //     $("#error-name").html('veuillez renseignez ce champ');
-        // }
+
           if (name == '' || link == '' || description == '' || Categories_id == 0) {
              //alert("Please Fill All Fields");
               $('#message').addClass('ui negative message')
