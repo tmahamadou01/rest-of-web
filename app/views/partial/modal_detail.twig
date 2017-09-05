@@ -2,10 +2,12 @@
 <div class="ui modal" id="modal-detail">
     <i class="close icon"></i>
     <div class="header">
-        Détail de la ressource
+        Détail de la ressource #{{ ressource.id }}
     </div>
     <div class="content">
-        <h1>test</h1>
+        <h1><a href="{{ ressource.link }}">{{ ressource.name }}</a></h1>
+        <p>{{ ressource.link }}</p>
+        <p>{{ ressource.description }}</p>
     </div>
     <div class="actions">
         <div class="ui black deny button">
