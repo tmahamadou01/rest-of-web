@@ -7,7 +7,7 @@
     <div class="tableau">
         {% for categorie in categories %}
         <div class="cat">
-            <a href="rest-of-web/category/{{ categorie.name }}/{{ categorie.id }}">{{ categorie.name|e }}</a>
+            <a href="{{ path_for('category', { 'name': categorie.name|lower, 'id': categorie.id }) }}">{{ categorie.name|e }}</a>
         </div>
     {% endfor %}
     </div>
@@ -23,14 +23,4 @@
 
     {% include 'partial/modal.twig' %}
 {% endblock %}
-{% block men_footer %}
-    <div class="ui menu">
-        <a class="item" href="{{ path_for('ressources') }}">
-            Rest of web
-        </a>
-        <div class="right menu">
-            <a class="item" id="modal">Ajouter</a>
-            <a class="item hasard" id="btn-hasard">Voir au hasard</a>
-        </div>
-    </div>
-{% endblock %}
+
