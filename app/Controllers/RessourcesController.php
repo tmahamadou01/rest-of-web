@@ -56,14 +56,30 @@ class RessourcesController
     public function getRessourcesListOfCategory(RequestInterface $request, ResponseInterface $response){
         $route = $request->getAttribute('route');
         $category_id = $route->getArgument('id');
-        $category_name = $route->getArgument('name');
 
         $dbconnect = new DbConnect();
         $db = $dbconnect->getConnection();
+
         $sth = $db->prepare( 'SELECT * FROM Ressources WHERE Categories_id = '.$category_id);
         $sth->execute();
         $result = $sth->fetchAll();
-        $this->container->view->render($response, 'pages/list.twig', ["ressources" => $result, "name" => $category_name]);
+
+        $sth = $db->prepare( 'SELECT * FROM Categories;' );
+        $sth->execute();
+        $category_list = $sth->fetchAll();
+
+        $match_category_id = function ($category) use ($category_id) {
+            return $category['id'] === $category_id;
+        };
+        $category = array_filter($category_list, $match_category_id);
+        $category_name = reset($category)['name'];
+
+        $this->container->view->render($response, 'pages/list.twig',
+            [
+                "ressources" => $result,
+                "categories" => $category_list,
+                "name" => $category_name
+            ]);
 
     }
 }

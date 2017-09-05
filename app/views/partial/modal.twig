@@ -36,11 +36,10 @@
                 </div>
                 <div class="field">
                     <select id="category">
-                        <option value="0">Catégorie</option>
-                        <option value="1">Catégorie 1</option>
-                        <option value="2">Catégorie 2</option>
-                        <option value="3">Catégorie 3</option>
-                        <option value="4">Catégorie 4</option>
+                        <option value="" selected disabled hidden>Choisir une catégorie</option>
+                        {% for category in categories %}
+                            <option value="{{ category.id }}">{{ category.name }}</option>
+                        {% endfor %}
                     </select>
                 </div>
             </div>
