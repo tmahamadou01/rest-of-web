@@ -5,7 +5,7 @@
     <div class="cat">
         <a id="link_list">{{ ressource.name }} #{{ ressource.id }}</a><br>
     </div>
-    {% include 'partial/modal_detail.twig' with {'ressource': 'ressource'}%}
+    {% include 'partial/modal_detail.twig' with {'ressource': ressource} %}
 {% endfor %}
 
     {% include 'partial/modal.twig' %}
