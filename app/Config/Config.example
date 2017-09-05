@@ -1,0 +1,12 @@
+<?php
+
+/** Database config
+  *
+  * Copy this file to Config.php and change the value for
+  * the USERNAME and PASSWORD of the database user.
+  */
+
+define('DB_USERNAME', 'USERNAME');
+define('DB_PASSWORD', 'PASSWORD');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'Hydra');
